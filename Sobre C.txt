@@ -72,3 +72,10 @@
 || ARREGLOS ||
 
     Todo arreglo es un puntero, pero no todo puntero es un arreglo. 
+
+|| CADENAS ||
+
+    -strcmp: compara dos cadenas pasadas por argumentos
+        Devuelve 0 si son iguales
+                1 si la segunda es mayor que la primera
+                -1 si la primera es mayor que la segunda
