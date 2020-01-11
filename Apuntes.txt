@@ -1,0 +1,26 @@
+APUNTES SOBRE EL CURSO DE INTRODUCCIÓN A C
+
+Pdst: Estos apuntes se hicieron en S.O Windows 10
+
+|| Como descargar el compilador de C ||
+
+	- Buscamos en google: codeblocks sourceforge
+	- Damos click en el primer link
+	- Buscamos la pestaña Files
+	- Entramos a la carpeta Binaries
+	- Damos en la carpeta con la version mas reciente, para mi epoca es 17.12
+	- Ingresamos en la carpeta de nuestro SO. Para mi caso Windows.
+	- Descargamos 'codeblocks-17.12mingw-setup.exe' clickeandolo.
+	- Si es en windows, damos siguiente siguiente siguiente....
+	- Vamos a la particion del disco donde se encuentra los archivos de nuestro S.O, por lo general Disco C
+	- Buscamos esta dirección: C:\Program Files (x86)\CodeBlocks\MinGW\Bin, y creamos una nueva variable de entorno con ella en la carpeta Path.
+	
+|| COMO COMPILAR UN PROGRAMA EN C USANDO gcc ||
+
+	Para ello realizamos este comando sobre nuestro archivo .c, en nuestro cmd:
+		gcc helloworld.c -o helloworld
+
+|| COMO EJECUTAR UN PROGRAMA EN C ||
+
+	Nos ubicamos en nuestro carpeta, donde esta nuestro ejecutable y realizamos:
+		./helloworld

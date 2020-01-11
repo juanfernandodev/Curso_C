@@ -1,0 +1,60 @@
+|| DATOS NUMERICOS ||
+    -int, float
+
+|| DATOS ALFANUMERICOS ||
+    - String, char
+
+|| BOOLEANOS ||
+    -Cualquier dato que es 0 es False, cualquier otro dato es True
+
+|| OPERADORES ||
+
+    -Clasificación según:
+        -Operadores: Binarios: tienen dos o mas operandos (+, -, *, /)
+                     Unarios: Solo tienen un unico operando  (++, +=,  --, -=, **, *=, etc.)
+        -Función:  Aritméticos (+,-, *, /, ++, --)
+                   Lógicos     (!, &&, ||, ^^)
+                   Bit a Bit   (&, |, ^)
+
+|| DIRECTIVAS DE PRE-COMPILADOR o PRE-PROCESADOR ||
+
+    Son algunas caracteristicas o tips que le damos al compilador 
+    para que entienda mejor nuestro programa, es como una especie de configuración
+    del procesador.
+
+    Las mas comunes son:
+        - include, define, ifdef, ifndef
+
+        Include: Inicia con #, indica que vamos a "incluir" el codigo de
+            otro archivo en el actual.
+
+|| STRUCT || 
+
+    Un struct es un mecanismo para definir nuevos tipos de datos complejos o estructurados
+
+    En un struct se puede guardar tipos de datos primitivos o incluso otros struct
+
+|| CONST ||
+
+    Es un modificador de tipo de dato, indica que el contenido de la variable no podrá ser sobreescrito,
+    pues es constante.
+
+    Este tipo de aclaración tiene especial relevancia cuando se trabaja con punteros.
+
+    Se trata de un mecanismo de seguridad, nos aseguramos de que nuestro programa no escribe donde no debe
+
+    Este tipo de seguridad se le conoce tambien como "principio de menor privilegio", en donde
+    no se le permite a modulos de software, tales como funciones, modificador
+    aspectos mas alla para lo que fueron creados.
+
+|| PUNTEROS ||
+    Es una variable que en su contenido guarda la dirección de memoria de 
+    otra variable. Por eso se dice que apunta o es puntera de una variable.
+
+    Los punteros no pueden contener numeros cualquiera, solo pueden contener
+    numeros que correspondan a direcciones de memoria.
+
+    int * pointer; --> Crea un puntero
+    *pointer --> con esto acceso al contenido de la direccion 
+                    de memoria a donde apunta el puntero
+    &number --> me da la direccion de memoria de una variable
