@@ -34,6 +34,11 @@
 
     En un struct se puede guardar tipos de datos primitivos o incluso otros struct
 
+    Si la estructura se pasa como argumento, osea su direccion de memoria &name_struct
+    entonces ella en la funcion que la recibe debe recibirse como su contenido *name_struct
+    para acceder a sus atributos se puede  usar:
+        (*name_struct).attr, o , name_struct-->attr, que es igualment valido cuando se manejan structs
+        
 || CONST ||
 
     Es un modificador de tipo de dato, indica que el contenido de la variable no podrá ser sobreescrito,
@@ -79,3 +84,14 @@
         Devuelve 0 si son iguales
                 1 si la segunda es mayor que la primera
                 -1 si la primera es mayor que la segunda
+
+|| BIBLIOTECAS ||
+
+    Se crea un archivo .h (mylib.h, p ej). y un archivo .c usa los metodos de él y les da cuerpo
+    El archivo .h es como una interfaz y el .c es la que la implementa usando un #include
+
+    luego si otra clase quiere usar el metodo del archivo .c entonces debe #include el archivo .h
+
+    para compilar y enlazar todo se debe compilar el archivo que usa el metodo y la que lo implementa
+    para mi caso es: mylib_usage.c y mylib.c, juntas, la linea de compilacion seria asi:
+        gcc mylib_usage.c mylib.c -o mylib_usage, esto solo crea un archivo binario 
