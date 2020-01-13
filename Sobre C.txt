@@ -38,7 +38,12 @@
     entonces ella en la funcion que la recibe debe recibirse como su contenido *name_struct
     para acceder a sus atributos se puede  usar:
         (*name_struct).attr, o , name_struct-->attr, que es igualment valido cuando se manejan structs
-        
+    
+    la directiva typedef, permite definir tipos de datos asi:
+        typedef char NAME[100];
+        typedef char EMAIL[100];
+
+    Una struct puede usarlos asi: NAME name, EMAIL email;
 || CONST ||
 
     Es un modificador de tipo de dato, indica que el contenido de la variable no podrá ser sobreescrito,
@@ -95,3 +100,34 @@
     para compilar y enlazar todo se debe compilar el archivo que usa el metodo y la que lo implementa
     para mi caso es: mylib_usage.c y mylib.c, juntas, la linea de compilacion seria asi:
         gcc mylib_usage.c mylib.c -o mylib_usage, esto solo crea un archivo binario 
+
+|| RESERVA DE MEMORIA DINAMICA ||
+
+    *malloc y *realloc: interactuan con el S.O para reservar
+    memoria en posiciones continuas.
+
+    El NULL es igual al valor 0, !NULL es igual a 1, NULL en una lista es que no tiene ningun valor
+
+|| LEER DE CONSOLA ||
+    char buffer [100];
+    scanf("%s", buffer); 
+
+    Tambien se le puede especificar cuantos caracteres leer:
+    scanf("%99s", buffer); Puede leer 99 caracteres
+
+    void *malloc (size_t size): Asigna la memoria solicitada y retorna un puntero a esta o NULL si la solicitud falla.
+
+    void *realloc(void *ptr, size_t size): Intenta cambiar el tamaño del bloque de memoria al que apunta ptr que se asigno previamente,
+                                            es decir lo aumenta. 
+                                            prt: es el puntero a un bloque de memoria previamente asignado con malloc, calloc o realloc para ser
+                                            reasignado. Si esto es NULL, se asigna un nuevo bloque y la funcion devuelve un puentero a él.
+
+                                            size_t: este es el numero tamaño para el bloque de memoria en bytes. si es 0 y ptr apunta a un bloque de memoria
+                                            existente, el bloque de memoria apuntado por ptr se desasigna y se devuleve un puntero NULL. 
+
+|| MATEMATICAS ||
+
+    Libreria matematica: math.h
+
+    sqrt() raiz cuadrada
+    pow(a, 2) potencia
